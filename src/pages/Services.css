@@ -1,0 +1,140 @@
+/* ===== SERVICES PAGE ===== */
+
+.services-page {
+  padding-top: 80px;
+}
+
+.services-hero {
+  position: relative;
+  text-align: center;
+  padding: 6rem 2rem 2rem;
+  overflow: hidden;
+}
+
+.services-hero-glow {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, hsla(260, 100%, 68%, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Service Detail Cards ── */
+.services-detailed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.service-detail-card {
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.service-detail-card:hover {
+  border-color: var(--border-accent);
+}
+
+.sdc-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sdc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary-glow), var(--accent-glow));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary);
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.sdc-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.sdc-features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.sdc-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.feature-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+
+.sdc-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.02), transparent);
+  transition: left 0.6s;
+}
+
+.service-detail-card:hover .sdc-shine {
+  left: 100%;
+}
+
+/* ── CTA ── */
+.services-cta .cta-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 4rem 2rem;
+}
+
+.services-cta .cta-content h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+}
+
+.services-cta .cta-content p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .services-detailed-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sdc-features {
+    grid-template-columns: 1fr;
+  }
+
+  .services-cta .cta-content {
+    padding: 2.5rem 1.5rem;
+  }
+}
