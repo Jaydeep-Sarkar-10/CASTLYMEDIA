@@ -9,39 +9,38 @@
 }
 
 :root {
-  /* ── Color Palette (HSL for easy theming) ── */
-  --hue-primary: 260;
-  --primary: hsl(var(--hue-primary), 100%, 68%);
-  --primary-light: hsl(var(--hue-primary), 100%, 78%);
-  --primary-dark: hsl(var(--hue-primary), 80%, 50%);
-  --primary-glow: hsla(var(--hue-primary), 100%, 68%, 0.25);
+  /* ── Color Palette (Image Colors) ── */
+  --primary: #e0dace; /* Beige/Cream */
+  --primary-light: #ffffff;
+  --primary-dark: #b8b1a3;
+  --primary-glow: rgba(224, 218, 206, 0.25);
 
-  --accent: hsl(35, 95%, 58%);
-  --accent-light: hsl(35, 95%, 70%);
-  --accent-glow: hsla(35, 95%, 58%, 0.2);
+  --accent: #4f3521; /* Warm Brown */
+  --accent-light: #704d33;
+  --accent-glow: rgba(79, 53, 33, 0.3);
 
   /* ── Backgrounds ── */
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #111118;
-  --bg-tertiary: #16161f;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-card-hover: rgba(255, 255, 255, 0.08);
-  --bg-glass: rgba(16, 16, 24, 0.75);
+  --bg-primary: #080808; /* Darkest Black */
+  --bg-secondary: #16110d;
+  --bg-tertiary: #2a1e16; /* Espresso */
+  --bg-card: rgba(42, 30, 22, 0.4);
+  --bg-card-hover: rgba(42, 30, 22, 0.7);
+  --bg-glass: rgba(8, 8, 8, 0.75);
 
   /* ── Text ── */
-  --text-primary: #f0f0f5;
-  --text-secondary: #a0a0b5;
-  --text-muted: #6b6b80;
+  --text-primary: #e0dace;
+  --text-secondary: #a89f91;
+  --text-muted: #73695c;
 
   /* ── Borders ── */
-  --border: rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.12);
-  --border-accent: rgba(138, 92, 246, 0.3);
+  --border: rgba(224, 218, 206, 0.08);
+  --border-light: rgba(224, 218, 206, 0.15);
+  --border-accent: rgba(79, 53, 33, 0.5);
 
   /* ── Shadows ── */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.8);
   --shadow-glow: 0 0 40px var(--primary-glow);
 
   /* ── Spacing ── */
@@ -146,8 +145,8 @@ img {
   align-items: center;
   gap: 0.5rem;
   padding: 0.9rem 2.2rem;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #080808;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1rem;
