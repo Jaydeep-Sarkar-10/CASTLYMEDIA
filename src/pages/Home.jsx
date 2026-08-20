@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaPlay, FaArrowRight, FaInstagram } from 'react-icons/fa';
+import { FaPlay, FaArrowRight, FaInstagram, FaFilm, FaChartLine, FaRocket, FaMobileAlt, FaPenFancy, FaBullseye, FaPalette } from 'react-icons/fa';
 import './Home.css';
+import AccordionGallery from '../components/AccordionGallery';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -14,24 +15,39 @@ const fadeUp = {
 
 const services = [
   {
-    icon: '🎬',
+    icon: <FaFilm />,
     title: 'Cinematic Editing',
     desc: 'High-retention video edits that keep viewers hooked from first frame to last.',
   },
   {
-    icon: '📊',
+    icon: <FaChartLine />,
     title: 'Brand Strategy',
     desc: 'Strategic brand breakdowns that convert casual scrollers into loyal followers.',
   },
   {
-    icon: '🚀',
+    icon: <FaRocket />,
     title: 'Content Systems',
     desc: 'End-to-end content pipelines that consistently generate leads on autopilot.',
   },
   {
-    icon: '📱',
+    icon: <FaMobileAlt />,
     title: 'Social Growth',
     desc: 'Data-driven social media strategies that amplify reach and engagement.',
+  },
+  {
+    icon: <FaPenFancy />,
+    title: 'Scriptwriting & Hooks',
+    desc: 'Scroll-stopping hooks and scripts engineered for engagement and conversions.',
+  },
+  {
+    icon: <FaBullseye />,
+    title: 'Launch Packages',
+    desc: 'Complete launch packages for brands and creators ready to go from 0 to viral.',
+  },
+  {
+    icon: <FaPalette />,
+    title: 'Creative Direction',
+    desc: 'Overall visual and strategic direction to align your content with your brand identity.',
   },
 ];
 
@@ -147,25 +163,24 @@ function Home() {
             </p>
           </motion.div>
 
-          <div className="services-grid">
-            {services.map((service, i) => (
-              <motion.div
-                key={i}
-                className="service-card glass"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-50px' }}
-                variants={fadeUp}
-                custom={i}
-                whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              >
-                <div className="service-icon">{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.desc}</p>
-                <div className="service-shine" />
-              </motion.div>
-            ))}
-          </div>
+          <motion.div 
+            style={{ marginTop: '3rem' }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-50px' }}
+            variants={fadeUp}
+            custom={1}
+          >
+            <AccordionGallery 
+              items={services} 
+              defaultIndex={1} 
+              expandRatio={0.5} 
+              height={500}
+              accentColor="var(--primary)"
+              overlayColor="#0a0a0f"
+              textColor="#ffffff"
+            />
+          </motion.div>
         </div>
       </section>
 

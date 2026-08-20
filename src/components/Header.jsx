@@ -36,7 +36,6 @@ function Header() {
           <NavLink to="/about" onClick={closeMenu}>About</NavLink>
           <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
           <NavLink to="/portfolio" onClick={closeMenu}>Portfolio</NavLink>
-          <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
           <div className="nav-cta">
             <Link to="/contact" className="btn-primary" onClick={closeMenu}>
               Let's Talk
